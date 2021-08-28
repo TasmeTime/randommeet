@@ -1,0 +1,43 @@
+.groupContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  background-color: var(--gray-f1);
+  height: 3rem;
+  overflow: hidden;
+}
+
+.groupContainer .item {
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s, font-weight 0.3s;
+  transition: background-color 0.3s, font-weight 0.3s;
+  width: 100%;
+  color: var(--secondary);
+  height: 100%;
+  padding: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.groupContainer .item:hover {
+  font-weight: bold;
+  background-color: var(--primary-light);
+}
+
+.groupContainer .item.active {
+  font-weight: bold;
+  background-color: var(--primary-light);
+}
+/*# sourceMappingURL=ButtonGroup.module.css.map */

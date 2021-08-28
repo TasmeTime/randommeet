@@ -1,0 +1,274 @@
+.chatContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1rem;
+  width: 100%;
+  height: 100%;
+  row-gap: 20px;
+}
+
+.chatContainer .topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatContainer .topBar .backButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 10px;
+  background-color: var(--gray-f1);
+  padding: 0.6rem 0.7rem;
+  cursor: pointer;
+}
+
+.chatContainer .topBar .backButton:hover {
+  background-color: var(--gray-d1);
+}
+
+.chatContainer .topBar .avatar {
+  position: relative;
+}
+
+.chatContainer .topBar .avatar img {
+  border-radius: 50%;
+}
+
+.chatContainer .topBar .avatar ::after {
+  content: "";
+  position: absolute;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  bottom: 0.2rem;
+  left: 0;
+  border: 2px solid var(--gray-f1);
+  background-color: var(--primary);
+}
+
+.chatContainer .convoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  row-gap: 1rem;
+  overflow: scroll;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.chatContainer .convoContainer .selfMessage {
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  row-gap: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chatContainer .convoContainer .selfMessage p {
+  background-color: var(--primary);
+  padding: 0.7rem 1.3rem;
+  border-radius: 20px 0 20px 20px;
+  color: white;
+  font-weight: 300;
+}
+
+.chatContainer .convoContainer .selfMessage span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: var(--gray-a1);
+  font-size: 0.9rem;
+}
+
+.chatContainer .convoContainer .othersMessage {
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  row-gap: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chatContainer .convoContainer .othersMessage p {
+  background-color: var(--secondary);
+  word-wrap: anywhere;
+  padding: 0.7rem 1.3rem;
+  border-radius: 0 20px 20px 20px;
+  color: white;
+  font-weight: 300;
+}
+
+.chatContainer .convoContainer .othersMessage span {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: var(--gray-a1);
+  font-size: 0.9rem;
+}
+
+@-webkit-keyframes isTypingBounce {
+  from {
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
+  to {
+    -webkit-transform: translateY(35%);
+            transform: translateY(35%);
+  }
+}
+
+@keyframes isTypingBounce {
+  from {
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
+  to {
+    -webkit-transform: translateY(35%);
+            transform: translateY(35%);
+  }
+}
+
+.chatContainer .convoContainer .isTyping {
+  background-color: var(--gray-d1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0.4rem;
+          column-gap: 0.4rem;
+  border-radius: 0 20px 20px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chatContainer .convoContainer .isTyping :nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.chatContainer .convoContainer .isTyping :nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.chatContainer .convoContainer .isTyping span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  -webkit-animation-name: isTypingBounce;
+          animation-name: isTypingBounce;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.chatContainer .inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.chatContainer .inputContainer .input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  padding: 0.4rem 1rem 0 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  resize: none;
+  background-color: var(--primary-chatInput);
+  margin-right: 0.5rem;
+}
+
+.chatContainer .inputContainer .input ::-webkit-input-placeholder {
+  color: var(--gray-c1);
+}
+
+.chatContainer .inputContainer .input :-ms-input-placeholder {
+  color: var(--gray-c1);
+}
+
+.chatContainer .inputContainer .input ::-ms-input-placeholder {
+  color: var(--gray-c1);
+}
+
+.chatContainer .inputContainer .input ::placeholder {
+  color: var(--gray-c1);
+}
+
+.chatContainer .inputContainer .input:focus {
+  outline: none;
+}
+
+.chatContainer .inputContainer i {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  background-color: var(--primary);
+  font-size: 2rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+.chatContainer .inputContainer i:hover {
+  background-color: var(--primary-hover);
+}
+/*# sourceMappingURL=Chat.module.css.map */

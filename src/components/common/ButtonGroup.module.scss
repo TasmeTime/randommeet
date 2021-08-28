@@ -1,0 +1,29 @@
+.groupContainer {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: var(--gray-f1);
+  height: 3rem;
+  overflow: hidden;
+
+  .item {
+    cursor: pointer;
+    transition: background-color 0.3s, font-weight 0.3s;
+    width: 100%;
+    color: var(--secondary);
+    height: 100%;
+    padding: 0.8rem;
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .item:hover {
+    font-weight: bold;
+    background-color: var(--primary-light);
+  }
+  .item.active {
+    font-weight: bold;
+    background-color: var(--primary-light);
+  }
+}

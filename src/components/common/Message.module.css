@@ -1,0 +1,109 @@
+a {
+  text-decoration: none;
+}
+
+a .message {
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  padding: 0.3rem;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a .message .senderAvatar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+a .message .senderAvatar.online {
+  border: 0.25rem solid var(--primary);
+}
+
+a .message .messageDetail {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 0.6rem;
+  margin-right: 0.1rem;
+}
+
+a .message .messageDetail .senderName {
+  color: var(--secondary);
+  overflow-wrap: anywhere;
+}
+
+a .message .messageDetail .messageSum {
+  font-weight: 300;
+  overflow-wrap: anywhere;
+  color: var(--gray-c1);
+}
+
+a .message .messageInfo {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+a .message .messageInfo .messageTime {
+  color: var(--gray-a8);
+  font-weight: normal;
+}
+
+a .message .messageInfo .unreadBadge {
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: 10px;
+  background-color: var(--primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem 1rem;
+  max-height: 1rem;
+  max-width: 3rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+a .message:hover {
+  background-color: var(--gray-f9);
+}
+/*# sourceMappingURL=Message.module.css.map */
